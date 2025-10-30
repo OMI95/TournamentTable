@@ -15,5 +15,7 @@ class LeftTableCell: UITableViewCell {
     func configure(position: Int, club: String) {
         posLabel.text = "\(position)"
         clubLabel.text = club
+        clubLabel.numberOfLines = 0
+        clubLabel.lineBreakMode = .byWordWrapping
     }
 }
