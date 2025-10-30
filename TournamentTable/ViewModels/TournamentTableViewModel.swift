@@ -5,7 +5,11 @@
 //  Created by Muhammad Omer on 29/10/2025.
 //
 
-final class TournamentTableViewModel {
+protocol TournamentTableViewModelProtocol {
+    var standings: [TeamStanding] { get }
+}
+
+final class TournamentTableViewModel: TournamentTableViewModelProtocol {
     private(set) var standings: [TeamStanding] = []
 
     init() {
@@ -21,5 +25,4 @@ final class TournamentTableViewModel {
             TeamStanding(position: 5, clubName: "Bournemouth", played: 25, won: 12, draw: 7, lost: 6, goalScored: 44, goalAgainst: 29, goalDiff: 15, points: 43)
         ]
     }
-
 }
